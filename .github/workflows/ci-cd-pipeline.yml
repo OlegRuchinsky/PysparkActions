@@ -1,0 +1,26 @@
+name: PySpark CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Docker
+      - name: Build Docker image
+        run: docker build -t pyspark-tests .
+
+      # Step 3: Run tests in Docker
+      - name: Run tests
+        run: docker run --rm pyspark-tests
