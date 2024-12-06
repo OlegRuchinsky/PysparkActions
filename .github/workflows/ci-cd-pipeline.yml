@@ -11,16 +11,14 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    container:
+      image: apache/spark:3.4.4-scala2.12-java11-python3-r-ubuntu # apache/spark:3.4.1
     steps:
-      # Step 1: Checkout code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Docker
-      - name: Build Docker image
-        run: docker build -t pyspark-tests .
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      # Step 3: Run tests in Docker
       - name: Run tests
-        run: docker run --rm pyspark-tests
+        run: pytest
