@@ -12,7 +12,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: apache/spark:3.4.4-scala2.12-java11-python3-r-ubuntu # apache/spark:3.4.1
+      image: apache/spark:3.4.4 # apache/spark:3.4.1
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
