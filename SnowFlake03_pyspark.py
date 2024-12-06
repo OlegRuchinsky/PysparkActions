@@ -97,5 +97,7 @@ def main():
     print(f"Row count before transformations: {original_count}")
     print(f"Row count after transformations: {transformed_count}")
 
+
 if __name__ == "__main__":
     main()
+
