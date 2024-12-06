@@ -12,7 +12,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: apache/spark:3.4.4 # apache/spark:3.4.1
+      image: apache/spark:3.4.4
+      options: --user root
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
