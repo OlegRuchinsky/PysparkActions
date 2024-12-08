@@ -1,3 +1,3 @@
 # ✨ setup-spark
 
-[![Test setup-spark action](https://github.com/OlegRuchinsky/PysparkActions/tree/main/.github/workflows/ci-cd-pipeline.yml/badge.svg)](https://github.com/OlegRuchinsky/PysparkActions/tree/main/.github/workflows/ci-cd-pipeline.yml)
+[![PySpark CI/CD Pipeline](https://github.com/OlegRuchinsky/PysparkActions/actions/workflows/ci-cd-pipeline.yml/badge.svg?branch=main)](https://github.com/OlegRuchinsky/PysparkActions/actions/workflows/ci-cd-pipeline.yml)
